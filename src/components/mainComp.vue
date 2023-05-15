@@ -75,7 +75,7 @@ export default{
         </div>
     </div>
     <!-- section -->
-    <div id="results" class="p-3 ">
+    <div id="results" class="p-3">
         <div class="container text-center column">
             <div>
                 <h2>REAL WORD RESULTS</h2>
@@ -142,7 +142,38 @@ export default{
             
         </div>
     </div>
-
+    <!-- section -->
+    <div id="facilities" class="p-3 text-center">
+        <h2>HIGH PERFORMANCE FACILITIES</h2>
+        <img src="../assets/images/divider-xx-red.png" alt="">
+        <div class="d-flex flex-wrap justify-content-center align-items-center">
+            <div class="col-3 m-2">
+                <img src="../assets/images/home-image1.jpg" alt="">
+            </div>
+            <div class="col-3 m-2">
+                <img src="../assets/images/home-image1.jpg" alt="">
+            </div>
+            <div class="col-3 m-2">
+                <img src="../assets/images/home-image1.jpg" alt="">
+            </div>
+            <div class="col-3 m-2">
+                <img src="../assets/images/home-image1.jpg" alt="">
+            </div>
+            <div class="col-3 m-2">
+                <img src="../assets/images/home-image1.jpg" alt="">
+            </div>
+            <div class="col-3 m-2">
+                <img src="../assets/images/home-image1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- section -->
+    <div id="quote-of-day" class="p-3 text-center d-flex justify-content-center align-items-center">
+        <div class="col-8">
+            <h3>"I fear not the man who has practiced 10,000 kicks once, but i fear the man who has practiced one kick 10,000 times"</h3>
+            <span>BRUCE LEE - QUOTE OF THE DAY</span>
+        </div>
+    </div>
   </section>
 </template>
 
@@ -186,6 +217,25 @@ export default{
             background-color: rgb(31 33 35);
             
         }
+    }
+
+    #facilities{
+        background-color: rgb(37 41 43);
+        height: 100%;
+        div{
+            img{
+                width: 94%;
+            }
+
+        }
+    }
+
+    #quote-of-day{
+        background-image: url('../assets/images/home-testimonial-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 80%;
     }
 }
 </style>
