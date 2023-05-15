@@ -74,6 +74,74 @@ export default{
             </div>
         </div>
     </div>
+    <!-- section -->
+    <div id="results" class="p-3 ">
+        <div class="container text-center column">
+            <div>
+                <h2>REAL WORD RESULTS</h2>
+                <img class="my-3" src="../assets/images/divider-xx-red.png" alt="">
+            </div>
+            <div class="container d-flex flex-wrap justify-content-center">
+                <div class="card m-3 col-4 p-1">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../assets/images/review_1-compressor.jpg" alt="">
+                        </div>
+                        <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-text">"The trainers at Avada Gym have helped me reach my fitness goals beyond anything i could of hoped for. I love it!"</p>
+                            <p class="card-text"><small class="text-body-secondary">-Tara Smith</small></p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card m-3 col-4 p-1">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../assets/images/review_1-compressor.jpg" alt="">
+                        </div>
+                        <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-text">"The trainers at Avada Gym have helped me reach my fitness goals beyond anything i could of hoped for. I love it!"</p>
+                            <p class="card-text"><small class="text-body-secondary">-Tara Smith</small></p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card m-3 col-4 p-1">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../assets/images/review_1-compressor.jpg" alt="">
+                        </div>
+                        <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-text">"The trainers at Avada Gym have helped me reach my fitness goals beyond anything i could of hoped for. I love it!"</p>
+                            <p class="card-text"><small class="text-body-secondary">-Tara Smith</small></p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card m-3 col-4 p-1">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../assets/images/review_1-compressor.jpg" alt="">
+                        </div>
+                        <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-text">"The trainers at Avada Gym have helped me reach my fitness goals beyond anything i could of hoped for. I love it!"</p>
+                            <p class="card-text"><small class="text-body-secondary">-Tara Smith</small></p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
 
   </section>
 </template>
@@ -108,6 +176,15 @@ export default{
             border: 1px solid rgb(238 96 89);
             padding: 1.25rem 1rem;
             border-radius: 100%;
+        }
+    }
+
+    #results{
+        background-color: rgb(37 41 43);
+        height: 100%;
+        .card{
+            background-color: rgb(31 33 35);
+            
         }
     }
 }
