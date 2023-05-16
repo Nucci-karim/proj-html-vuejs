@@ -256,7 +256,13 @@ export default{
         </div>
         <div class=" d-flex flex-wrap justify-content-center align-items-center">
             <div v-for="(elem,index) in arrayPerformance" :key="index" class="card m-3 col-3" >
-                <img :src="elem.image" class="card-img-top" alt="...">
+                <div id="search-on-img" class="position-relative">
+                    <img :src="elem.image" class="card-img-top" alt="...">
+                    <div id="to-hide" class="position-absolute top-50 start-50 translate-middle">
+                        <i class="fa-solid fa-link"></i>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
                 <div class="card-body">
                     <h5 class="card-title">{{elem.title}}</h5>
                     <h5 class="card-title">{{elem.professione}}</h5>
@@ -365,6 +371,24 @@ export default{
     #performance{
         background-color: rgb(37 41 43);
         min-height: 100%;
+        #search-on-img{
+            #to-hide{
+                display: none;
+                i{
+                    margin: 0 0.5rem;
+                }
+            }
+            &:hover{
+                #to-hide{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(213, 98, 95, 0.8);
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
         .card{
             background-color: rgb(31 33 35);
             p{
@@ -374,7 +398,7 @@ export default{
     }
 
     #achieve-goals{
-        min-height: 30%;
+        min-height: 200px;
         background-image: url('../assets/images/home-parallax.jpg');
         background-size: cover;
         background-position: 50% 20%;
