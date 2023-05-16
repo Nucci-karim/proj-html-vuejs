@@ -277,6 +277,16 @@ export default{
             <a href="/" class="btn btn-outline-light col-3 my-3">View all Articles</a>
         </div>
     </div>
+    <!-- section -->
+    <div id="achieve-goals" class="p-3 d-flex justify-content-center align-items-center">
+        <div>
+            <h2>Achieve your fitness goals</h2>
+            <p>Flexible membering packages to suit all levels of athlete and achieve your fitness goals</p>
+        </div>
+        <div class="text-center">
+            <a href="/" class="btn btn-outline-light m-3">Join us</a>
+        </div>
+    </div>
   </section>
 </template>
 
@@ -290,11 +300,11 @@ export default{
         // background-repeat: no-repeat;
         background-color: rgb(37 41 43);
         padding: 2rem 0;
-        height: 80%;
+        min-height: 80%;
     }
     #sign-up{
         background-color: rgb(31 33 35);
-        height: 80%;
+        min-height: 80%;
         .btn{
             background-color: rgb(238 96 89);
         }
@@ -304,7 +314,7 @@ export default{
         background-size: cover;
         background-position: top;
         background-repeat: no-repeat;
-        height: 90%;
+        min-height: 90%;
         i{
             font-size: 50px;
             border: 1px solid rgb(238 96 89);
@@ -315,7 +325,7 @@ export default{
 
     #results{
         background-color: rgb(37 41 43);
-        height: 100%;
+        min-height: 100%;
         .card{
             background-color: rgb(31 33 35);
             
@@ -324,7 +334,7 @@ export default{
 
     #facilities{
         background-color: rgb(37 41 43);
-        height: 100%;
+        min-height: 100%;
         div{
             img{
                 width: 94%;
@@ -338,7 +348,7 @@ export default{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 80%;
+        min-height: 80%;
     }
 
     #trainers{
@@ -361,6 +371,14 @@ export default{
                 color: rgb(169 169 169);
             }
         }
+    }
+
+    #achieve-goals{
+        min-height: 30%;
+        background-image: url('../assets/images/home-parallax.jpg');
+        background-size: cover;
+        background-position: 50% 20%;
+        background-repeat: no-repeat;
     }
 }
 </style>
