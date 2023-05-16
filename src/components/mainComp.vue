@@ -8,14 +8,133 @@ export default{
   },
   data(){
     return{
-      store
+      store,
+      arrayInfo : [
+            {
+                classeIcon: 'fa-solid fa-link-slash',
+                titolo: 'Strength & Conditioning',
+                paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio ex atque aspernatur architecto quaerat fugiat doloremque, asperiores facere enim! Tempore, fugiat animi! Dolorum, cum!'
+            },
+            {
+                classeIcon: 'fa-solid fa-bicycle',
+                titolo: 'Fitness & Cardio',
+                paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio ex atque aspernatur architecto quaerat fugiat doloremque, asperiores facere enim! Tempore, fugiat animi! Dolorum, cum!'
+            },
+            {
+                classeIcon: 'fa-solid fa-lungs',
+                titolo: 'Flexibility & rest',
+                paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio ex atque aspernatur architecto quaerat fugiat doloremque, asperiores facere enim! Tempore, fugiat animi! Dolorum, cum!'
+            },
+            {
+                classeIcon: 'fa-solid fa-heart-pulse',
+                titolo: 'Health & Diet',
+                paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio ex atque aspernatur architecto quaerat fugiat doloremque, asperiores facere enim! Tempore, fugiat animi! Dolorum, cum!'
+            },
+        ],
+        arrayResults: [
+            {
+                photo: 'src/assets/images/review_1-compressor.jpg',
+                paragraph: '"The trainers at Avada Gym have helped me reach my fitness goals beyond anything i could of hoped for. I love it!"',
+                nome: '-Tara Smith'
+            },
+            {
+                photo: 'src/assets/images/review_3-compressor-2.jpg',
+                paragraph: '"The trainers at Avada Gym have helped me reach my fitness goals beyond anything i could of hoped for. I love it!"',
+                nome: '-Simon chel'
+            },
+            {
+                photo: 'src/assets/images/review_2-compressor.jpg',
+                paragraph: '"The trainers at Avada Gym have helped me reach my fitness goals beyond anything i could of hoped for. I love it!"',
+                nome: '-Jen Wirth'
+            },
+            {
+                photo: 'src/assets/images/review_4-compressor-2.jpg',
+                paragraph: '"The trainers at Avada Gym have helped me reach my fitness goals beyond anything i could of hoped for. I love it!"',
+                nome: '-Jeff Glum'
+            },
+        ],
+        arrayFacilities: [
+            {
+                image : '../src/assets/images/home-image1.jpg',
+            },
+            {
+                image : '../src/assets/images/home-image2.jpg',
+            },
+            {
+                image : '../src/assets/images/home-image3.jpg',
+            },
+            {
+                image : '../src/assets/images/home-image4.jpg',
+            },
+            {
+                image : '../src/assets/images/home-image54.jpg',
+            },
+            {
+                image : '../src/assets/images/home-image6.jpg',
+            },
+        ],
+        arrayTrainers:[
+            {
+                image: '../src/assets/images/trainer1-400x297.jpg',
+                titlo:'Ann Baker',
+                professione: 'Personal Trainer',
+                paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio',
+            },
+            {
+                image: '../src/assets/images/trainer3-400x297.jpg',
+                titlo:'Anne Warren',
+                professione: 'Personal Trainer',
+                paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio',
+            },
+            {
+                image: '../src/assets/images/trainer4-400x297.jpg',
+                titlo:'Peter Rice',
+                professione: 'Personal Trainer',
+                paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio',
+            },
+            
+        ],
+        arrayPerformance: [
+            {
+                image: '../src/assets/images/blog1-400X208.jpg',
+                title: 'Train with free weights or your body weight',
+                paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio'
+            },
+            {
+                image: '../src/assets/images/blog6-400X400.jpg',
+                title: 'Nutritional advice that will keep you training',
+                paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio'
+            },
+            {
+                image: '../src/assets/images/trainer4-400x297.jpg',
+                title: 'Simple principles for your next workout',
+                paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio'
+            },
+            {
+                image: '../src/assets/images/blog4-400X289.jpg',
+                title: "To be number one, train like you're number two",
+                paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio'
+            },
+            {
+                image: '../src/assets/images/trainer3-400x297.jpg',
+                title: 'Top five mistakes every gym member makes',
+                paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio'
+            },
+            {
+                image: '../src/assets/images/trainer1-400x297.jpg',
+                title: 'The miths of shedding body fat explored',
+                paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio'
+            },
+        ],
+        
+
     }
   },
   created(){
 
   },
   methods: {
-
+    
   }
 }
 </script>
@@ -48,29 +167,11 @@ export default{
     <!-- section -->
     <div id="info" class="p-3 d-flex justify-content-center align-items-center">
         <div class="container d-flex">
-            <div class="col text-center">
-                <i class="fa-solid fa-link-slash" style="color: #ee6059;"></i>
-                <h3>Strength & Conditioning</h3>
+            <div v-for="(elem, index) in arrayInfo" :key="index" class="col text-center">
+                <i :class="elem.classeIcon" style="color: #ee6059;"></i>
+                <h3>{{elem.titolo}}</h3>
                 <img src="../assets/images/divider-x-red.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio ex atque aspernatur architecto quaerat fugiat doloremque, asperiores facere enim! Tempore, fugiat animi! Dolorum, cum!</p>
-            </div>
-            <div class="col text-center">
-                <i class="fa-solid fa-bicycle" style="color: #ee6059;"></i>
-                <h3>Strength & Conditioning</h3>
-                <img src="../assets/images/divider-x-red.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio ex atque aspernatur architecto quaerat fugiat doloremque, asperiores facere enim! Tempore, fugiat animi! Dolorum, cum!</p>
-            </div>
-            <div class="col text-center">
-                <i class="fa-solid fa-lungs" style="color: #ee6059;"></i>
-                <h3>Strength & Conditioning</h3>
-                <img src="../assets/images/divider-x-red.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio ex atque aspernatur architecto quaerat fugiat doloremque, asperiores facere enim! Tempore, fugiat animi! Dolorum, cum!</p>
-            </div>
-            <div class="col text-center">
-                <i class="fa-solid fa-heart-pulse" style="color: #ee6059;"></i>
-                <h3>Strength & Conditioning</h3>
-                <img src="../assets/images/divider-x-red.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ad. Assumenda nisi, blanditiis illum optio ex atque aspernatur architecto quaerat fugiat doloremque, asperiores facere enim! Tempore, fugiat animi! Dolorum, cum!</p>
+                <p>{{ elem.paragraph }}</p>
             </div>
         </div>
     </div>
@@ -81,58 +182,17 @@ export default{
                 <h2>REAL WORD RESULTS</h2>
                 <img class="my-3" src="../assets/images/divider-xx-red.png" alt="">
             </div>
+
             <div class="container d-flex flex-wrap justify-content-center">
-                <div class="card m-3 col-4 p-1">
+                <div v-for="(elem, index) in arrayResults" :key="index" class="card m-3 col-4 p-1">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="../assets/images/review_1-compressor.jpg" alt="">
+                            <img :src="'../' + elem.photo" alt="">
                         </div>
                         <div class="col-md-8">
                         <div class="card-body">
-                            <p class="card-text">"The trainers at Avada Gym have helped me reach my fitness goals beyond anything i could of hoped for. I love it!"</p>
-                            <p class="card-text"><small class="text-body-secondary">-Tara Smith</small></p>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card m-3 col-4 p-1">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="../assets/images/review_1-compressor.jpg" alt="">
-                        </div>
-                        <div class="col-md-8">
-                        <div class="card-body">
-                            <p class="card-text">"The trainers at Avada Gym have helped me reach my fitness goals beyond anything i could of hoped for. I love it!"</p>
-                            <p class="card-text"><small class="text-body-secondary">-Tara Smith</small></p>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card m-3 col-4 p-1">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="../assets/images/review_1-compressor.jpg" alt="">
-                        </div>
-                        <div class="col-md-8">
-                        <div class="card-body">
-                            <p class="card-text">"The trainers at Avada Gym have helped me reach my fitness goals beyond anything i could of hoped for. I love it!"</p>
-                            <p class="card-text"><small class="text-body-secondary">-Tara Smith</small></p>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card m-3 col-4 p-1">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="../assets/images/review_1-compressor.jpg" alt="">
-                        </div>
-                        <div class="col-md-8">
-                        <div class="card-body">
-                            <p class="card-text">"The trainers at Avada Gym have helped me reach my fitness goals beyond anything i could of hoped for. I love it!"</p>
-                            <p class="card-text"><small class="text-body-secondary">-Tara Smith</small></p>
+                            <p class="card-text">{{elem.paragraph}}</p>
+                            <p class="card-text"><small class="text-body-secondary">{{elem.nome}}</small></p>
                         </div>
                         </div>
                     </div>
@@ -143,27 +203,12 @@ export default{
         </div>
     </div>
     <!-- section -->
-    <div id="facilities" class="p-3 text-center">
+    <div id="facilities" class="p-4 text-center">
         <h2>HIGH PERFORMANCE FACILITIES</h2>
         <img src="../assets/images/divider-xx-red.png" alt="">
         <div class="d-flex flex-wrap justify-content-center align-items-center">
-            <div class="col-3 m-2">
-                <img src="../assets/images/home-image1.jpg" alt="">
-            </div>
-            <div class="col-3 m-2">
-                <img src="../assets/images/home-image1.jpg" alt="">
-            </div>
-            <div class="col-3 m-2">
-                <img src="../assets/images/home-image1.jpg" alt="">
-            </div>
-            <div class="col-3 m-2">
-                <img src="../assets/images/home-image1.jpg" alt="">
-            </div>
-            <div class="col-3 m-2">
-                <img src="../assets/images/home-image1.jpg" alt="">
-            </div>
-            <div class="col-3 m-2">
-                <img src="../assets/images/home-image1.jpg" alt="">
+            <div v-for="(elem, index) in arrayFacilities" :key="index" class="col-3 m-2">
+                <img :src="elem.image" alt="">
             </div>
         </div>
     </div>
@@ -172,6 +217,64 @@ export default{
         <div class="col-8">
             <h3>"I fear not the man who has practiced 10,000 kicks once, but i fear the man who has practiced one kick 10,000 times"</h3>
             <span>BRUCE LEE - QUOTE OF THE DAY</span>
+        </div>
+    </div>
+    <!-- section -->
+    <div id="trainers" class="p-3 column">
+        <div class="text-center">
+            <h2>Meet our trainers</h2>
+            <img src="../assets/images/divider-xx-red.png" alt="">
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <div v-for="(elem,index) in arrayTrainers" :key="index" class="card m-2" style="width: 18rem;">
+                <img :src="elem.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{elem.titlo}}</h5>
+                    <h5 class="card-title">{{elem.professione}}</h5>
+                    <p class="card-text my-2">{{ elem.paragraph }}</p>
+                    <a href="#" class="btn">
+                        <i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i>
+                    </a>
+                    <a href="#" class="btn">
+                        <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                    </a>
+                    <a href="#" class="btn">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="/" class="btn btn-outline-light col-3 my-3">View all trainers</a>
+        </div>
+    </div>
+    <!-- section -->
+    <div id="performance" class="p-3 column">
+        <div class="text-center">
+            <h2>PERFORMANCE NEWS</h2>
+            <img src="../assets/images/divider-xx-red.png" alt="">
+        </div>
+        <div class=" d-flex flex-wrap justify-content-center align-items-center">
+            <div v-for="(elem,index) in arrayPerformance" :key="index" class="card m-3 col-3" >
+                <img :src="elem.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{elem.title}}</h5>
+                    <h5 class="card-title">{{elem.professione}}</h5>
+                    <p class="card-text my-2">{{ elem.paragraph }}</p>
+                    <a href="#" class="btn">
+                        <i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i>
+                    </a>
+                    <a href="#" class="btn">
+                        <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                    </a>
+                    <a href="#" class="btn">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="/" class="btn btn-outline-light col-3 my-3">View all Articles</a>
         </div>
     </div>
   </section>
@@ -236,6 +339,28 @@ export default{
         background-position: center;
         background-repeat: no-repeat;
         height: 80%;
+    }
+
+    #trainers{
+        background-color: rgb(31 33 35);
+        height: 110%;
+        .card{
+            background-color: rgb(37 41 43);
+            p{
+                color: rgb(169 169 169);
+            }
+        }
+    }
+
+    #performance{
+        background-color: rgb(37 41 43);
+        min-height: 100%;
+        .card{
+            background-color: rgb(31 33 35);
+            p{
+                color: rgb(169 169 169);
+            }
+        }
     }
 }
 </style>
