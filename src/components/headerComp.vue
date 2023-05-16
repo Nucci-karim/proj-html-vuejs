@@ -51,8 +51,8 @@ export default{
             </ul>
         </div>
     </nav>
-    <div id="join-us" class="col-12 text-center column position-relative">
-        <div class="position-absolute top-50 start-50 translate-middle">
+    <div id="join-us" class="col-12 text-center">
+        <div class="column">
             <h1><strong>NO PAIN NO GAIN</strong></h1>
             <p class="mb-4">Motivation is what gets you started. Habit is what keeps you doing</p>
             <a href="/join-us" class="btn btn-outline-light">Join Us Today</a>
@@ -67,9 +67,10 @@ export default{
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    height: 100%;
+    min-height: 600px;
     nav{
         padding: 1rem 0;
+        min-height: 10%;
         #logo-nav{
             img{
                 width: 100%;

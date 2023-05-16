@@ -39,9 +39,7 @@ export default{
 <style lang="scss">
 @use './style/main.scss' as *;
 
-#tutto{
-height: 100vh;
-}
+
 
 
 </style>

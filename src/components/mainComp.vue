@@ -140,7 +140,7 @@ export default{
 </script>
 
 <template>
-  <section id="main" class="">
+  <section id="main">
     <!-- section -->
     <div id="world-class" class="col-12 text-center column position-relative ">
         <div class="position-absolute top-50 start-50 translate-middle">
@@ -300,11 +300,11 @@ export default{
         // background-repeat: no-repeat;
         background-color: rgb(37 41 43);
         padding: 2rem 0;
-        min-height: 80%;
+        min-height: 400px;
     }
     #sign-up{
         background-color: rgb(31 33 35);
-        min-height: 80%;
+        min-height: 400px;
         .btn{
             background-color: rgb(238 96 89);
         }
@@ -314,7 +314,7 @@ export default{
         background-size: cover;
         background-position: top;
         background-repeat: no-repeat;
-        min-height: 90%;
+        min-height: 500px;
         i{
             font-size: 50px;
             border: 1px solid rgb(238 96 89);
@@ -325,7 +325,7 @@ export default{
 
     #results{
         background-color: rgb(37 41 43);
-        min-height: 100%;
+        min-height: 500px;
         .card{
             background-color: rgb(31 33 35);
             
@@ -334,7 +334,7 @@ export default{
 
     #facilities{
         background-color: rgb(37 41 43);
-        min-height: 100%;
+        min-height: 500px;
         div{
             img{
                 width: 94%;
@@ -348,7 +348,7 @@ export default{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        min-height: 80%;
+        min-height: 400px;
     }
 
     #trainers{
