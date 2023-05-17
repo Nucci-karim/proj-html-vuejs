@@ -8,14 +8,23 @@ export default{
   },
   data(){
     return{
-      store
+      store,
+      arrayAboutUs: [
+        {
+          adress: '12345 North main street',
+          adress2: 'New York, NY555555',
+          number: 'Phone: 1.800.555.6789',
+          email: `email: info@${store.variabileDomain}.com`,
+        },
+      ],
+
     }
   },
   created(){
 
   },
   methods: {
-
+    
   }
 }
 </script>
@@ -25,12 +34,12 @@ export default{
     <!-- section -->
     <div id="about-us" class="p-3 d-flex justify-content-center align-items-center">
       <div>
-        <ul>
+        <ul v-for="(elem, index) in arrayAboutUs" :key="index">
           <h3>Come Find Us</h3>
-          <li>12345 North main street</li>
-          <li>New York, NY555555</li>
-          <li>Phone: 1.800.555.6789</li>
-          <li>email: info@your-domain.com</li>
+          <li>{{elem.adress}}</li>
+          <li>{{elem.adress2}}</li>
+          <li>{{elem.number}}</li>
+          <li>{{elem.email}}</li>
         </ul>
       </div>
 
